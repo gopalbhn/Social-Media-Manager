@@ -1,0 +1,8 @@
+background- #fbfbfe
+text- #050315
+primary- #2f27ce
+secondary - #dedcff
+accent - #433bff
+
+headings - poppins
+body- inter tight
