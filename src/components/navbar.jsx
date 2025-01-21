@@ -1,10 +1,14 @@
 import { Sun,Moon } from "lucide-react";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,Link} from 'react-router-dom'
 function NavBar({onclick,dark}) {
     const navigate = useNavigate();
   return (
     <div class="h-15 w-full px-10 bg-[#fbfbfe] dark:bg-[#050315] dark:text-[#fbfbfe] flex justify-between items-center text-poppins">
-      <div class="p-5">Media</div>
+      <div class="p-5">
+        <Link to="/">Media</Link>
+        
+        
+        </div>
       <div class="flex align-center gap-5">
         <ul class="flex items-center gap-5">
             {console.log('classes',document.body.classList)}
