@@ -1,21 +1,27 @@
-import image1 from "../assets/image1.png";
 import image_1 from "../assets/testimonial/image_1.jpeg";
+import image_2 from "../assets/testimonial/image_2.jpg";
+import image_3 from '../assets/testimonial/image_3.jpeg';
+import image_4 from '../assets/testimonial/image_4.jpg';
+import image1 from '../assets/image1.png'
+
 export default function LandingPage() {
-    let images = []
     let testimonialText = [
         {
+          'image':image_1,
           "company": "Tech Solutions Inc.",
           "testimonial": "This tool has completely streamlined our social media strategy. It's user-friendly, efficient, and has saved us so much time!"
         },
         {
+          'image':image_2,
           "company": "Creative Agency",
           "testimonial": "The analytics features are a game-changer. We can now track performance and adjust our content strategy in real-time."
         },
-        {
+        {'image':image_3,
           "company": "Global Enterprises",
           "testimonial": "We've been using this platform for months now, and it's helped us grow our social media presence significantly. Highly recommend!"
         },
        {
+        "image":image_4,
           "company": "Design Studio",
           "testimonial": "A fantastic tool for anyone managing multiple social media platforms. It saves time and increases efficiency, which is critical for our business."
         },
@@ -43,10 +49,10 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-        <p>Testimonial</p>
-      <div class="h-[300px] w-[100%] mt-28 mb-10 flex  items-center gap-[50px]">
+      <p class="text-3xl text-center mt-28">Testimonials</p>
+      <div class="h-[300px] w-[100%] mt-10 mb-10 flex  items-center gap-[50px]">
        {testimonialText.map(test=>
-        <TestimonialCard text={test.testimonial} image={image_1}/>
+        <TestimonialCard text={test.testimonial} image={test.image}/>
        )}
       </div>
     </div>
