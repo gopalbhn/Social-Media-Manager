@@ -13,7 +13,7 @@ function NavBar({onclick,dark}) {
         <ul class="flex items-center gap-5">
             {console.log('classes',document.body.classList)}
           <li>
-            <a href="#Home">Home</a>
+            <Link to='/home'>Home</Link>
           </li>
           <li>
             <a href="#Home">About</a>
