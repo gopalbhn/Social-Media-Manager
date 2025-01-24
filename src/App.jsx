@@ -6,6 +6,7 @@ import Login from './pages/login'
 import Signup from './pages/Signup'
 import LandingPage from './pages/LandingPage'
 import HomePage from './pages/home'
+import CreatePost from './pages/createPost'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -38,6 +39,7 @@ function App() {
     <Route path='/login' element={<Login />}></Route>  
     <Route path="/signup" element ={<Signup />} />
     <Route path='/home' element={<HomePage />} />
+    <Route path='/create' element={<CreatePost />} />
   </Routes>    
     </>
   )

@@ -1,4 +1,5 @@
-import { Instagram,SquarePen,Clipboard } from "lucide-react"
+import { Instagram,SquarePen,Clipboard,MessageSquare } from "lucide-react"
+import {Link} from 'react-router-dom'
 export default function HomePage(){
     let user = true;
     return(
@@ -8,7 +9,6 @@ export default function HomePage(){
         </div>
     )
 }
-
 function SidBar({user}){
        return( <>
         {user?(
@@ -59,13 +59,19 @@ function SidBar({user}){
 function MainMenu(){
     return(
         <div class="h-[100%] w-[100%] px-5 border-1 border-slate-950 flex gap-5">
+            <Link to='/create'>
                <div class="h-[150px] w-[150px] bg-red-200 dark:bg-[#433bff] shadow-xl shadow-red hover:scale-75 duration-1000 flex flex-col  items-center justify-center gap-4 cursor-pointer">
                     <span><SquarePen /></span>
                     <span class="text-xl">Create Post</span>
                 </div> 
+                </Link>
                 <div class="h-[150px] w-[150px] bg-red-200 dark:bg-[#433bff] shadow-xl shadow-red hover:scale-75 duration-700 flex flex-col  items-center justify-center gap-4 cursor-pointer">
                     <span><Clipboard /></span>
                     <span class="text-xl text-center">View All Post </span>
+                </div> 
+                <div class="h-[150px] w-[150px] bg-red-200 dark:bg-[#433bff] shadow-xl shadow-red hover:scale-75 duration-700 flex flex-col  items-center justify-center gap-4 cursor-pointer">
+                    <span><MessageSquare /></span>
+                    <span class="text-xl text-center">View All Messages </span>
                 </div> 
         </div>
     )
